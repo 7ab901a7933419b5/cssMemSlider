@@ -1,0 +1,49 @@
+.wrapper {
+  width: 60%;
+  margin: 5rem auto;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.frame {
+  display: inline-flex;
+}
+
+.image {
+  order: 1;
+  width: 100%;
+}
+
+.label {
+  order: 3;
+  margin-right: auto;
+  max-width: 60%;
+}
+
+.radio {
+  margin: 0;
+  display: inline-flex;
+  order: 5;
+  background-color: #FF0000;
+  color: #FF0000;
+  width: 2rem;
+  height: 0.5rem;
+  border: 0.1rem solid rgb(195, 193, 188);
+}
+.radio:first-of-type { border-radius: 50%; }
+.radio:last-of-type { border-radius: 50%; }
+.radio:hover { cursor: pointer; }
+.radio:checked { background: #BBDD22; }
+
+#frame1:checked ~ .frame2, .frame3, .frame4 { display: none; }
+#frame1:checked ~ .frame1 { display: block; }
+#frame2:checked ~ .frame1, .frame3, .frame4 { display: none; }
+#frame2:checked ~ .frame2 { display: block; }
+#frame3:checked ~ .frame1, .frame2, .frame4 { display: none; }
+#frame3:checked ~ .frame3 { display: block; }
+#frame4:checked ~ .frame1, .frame2, .frame3 { display: none; }
+#frame4:checked ~ .frame4 { display: block; }
