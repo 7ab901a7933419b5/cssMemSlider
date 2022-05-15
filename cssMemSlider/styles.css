@@ -1,6 +1,6 @@
 .wrapper {
-  width: 60%;
-  margin: 5rem auto;
+  width: 70%;
+  margin: 1rem auto;
 }
 
 .slider {
@@ -13,11 +13,12 @@
   display: inline-flex;
 }
 
-.image {
+img {
   order: 1;
   width: 100%;
   margin-bottom: 2rem;
   animation: 1s animate-frame ease-in-out;
+  border-radius: 3%;
 }
 
 a {
@@ -61,4 +62,16 @@ a {
 @keyframes animate-frame {
   from { opacity: 0%; }
   to { opacity: 100%; }
+}
+
+@media screen and (max-width: 480px) {
+  a {
+    max-width: 100%;
+    width: 100%;
+    order: 10;
+    font-size: 0.8rem;
+  }
+  .radio:first-of-type { margin-left: auto; }
+  .radio:last-of-type { margin-right: auto; }
+  .radio { margin-bottom: 1rem; }
 }
