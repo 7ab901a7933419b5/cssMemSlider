@@ -1,3 +1,7 @@
+body {
+  background-color: #EEEEEE;
+}
+
 .wrapper {
   width: 70%;
   margin: 1rem auto;
@@ -37,7 +41,7 @@ a {
   display: inline-flex;
   order: 5;
   background-color: #FFAAAA;
-  border: 0.1rem solid #FFFFFF;
+  border: 0.1rem solid #EEEEEE;
   width: 2rem;
   height: 1rem;
 }
@@ -45,7 +49,7 @@ a {
 .radio:last-of-type { border-radius: 0 50% 50% 0; }
 .radio:hover {
   cursor: pointer;
-  background: #999999;
+  background: #AAAAAA;
 }
 .radio:active { background: #33FF33; }
 .radio:checked { background: #AAFFAA; }
