@@ -16,28 +16,36 @@
 .image {
   order: 1;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-.label {
+a {
   order: 3;
   margin-right: auto;
   max-width: 60%;
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
 }
 
 .radio {
   margin: 0;
+  appearance: none;
   display: inline-flex;
   order: 5;
-  background-color: #FF0000;
-  color: #FF0000;
+  background-color: #FFAAAA;
+  border: 0.1rem solid #FFFFFF;
   width: 2rem;
-  height: 0.5rem;
-  border: 0.1rem solid rgb(195, 193, 188);
+  height: 1rem;
 }
-.radio:first-of-type { border-radius: 50%; }
-.radio:last-of-type { border-radius: 50%; }
-.radio:hover { cursor: pointer; }
-.radio:checked { background: #BBDD22; }
+.radio:first-of-type { border-radius: 50% 0 0 50%; }
+.radio:last-of-type { border-radius: 0 50% 50% 0; }
+.radio:hover {
+  cursor: pointer;
+  background: #999999;
+}
+.radio:active { background: #33FF33; }
+.radio:checked { background: #AAFFAA; }
 
 #frame1:checked ~ .frame2, .frame3, .frame4 { display: none; }
 #frame1:checked ~ .frame1 { display: block; }
