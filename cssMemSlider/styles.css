@@ -17,6 +17,7 @@
   order: 1;
   width: 100%;
   margin-bottom: 2rem;
+  animation: 1s animate-frame ease-in-out;
 }
 
 a {
@@ -26,6 +27,7 @@ a {
   color: black;
   text-decoration: none;
   font-family: sans-serif;
+  animation: 1s animate-frame ease-in-out;
 }
 
 .radio {
@@ -55,3 +57,8 @@ a {
 #frame3:checked ~ .frame3 { display: block; }
 #frame4:checked ~ .frame1, .frame2, .frame3 { display: none; }
 #frame4:checked ~ .frame4 { display: block; }
+
+@keyframes animate-frame {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
+}
