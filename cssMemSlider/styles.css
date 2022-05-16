@@ -1,0 +1,81 @@
+body {
+  background-color: #EEEEEE;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.frame {
+  display: inline-flex;
+}
+
+img {
+  order: 1;
+  width: 100%;
+  margin-bottom: 2rem;
+  animation: 1s animate-frame ease-in-out;
+  border-radius: 3%;
+}
+
+a {
+  order: 3;
+  margin-right: auto;
+  max-width: 60%;
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+  animation: 1s animate-frame ease-in-out;
+}
+
+.radio {
+  margin: 0;
+  appearance: none;
+  display: inline-flex;
+  order: 5;
+  background-color: #FFAAAA;
+  border: 0.1rem solid #EEEEEE;
+  width: 2rem;
+  height: 1rem;
+}
+.radio:first-of-type { border-radius: 50% 0 0 50%; }
+.radio:last-of-type { border-radius: 0 50% 50% 0; }
+.radio:hover {
+  cursor: pointer;
+  background: #AAAAAA;
+}
+.radio:active { background: #33FF33; }
+.radio:checked { background: #AAFFAA; }
+
+#frame1:checked ~ .frame2, .frame3, .frame4 { display: none; }
+#frame1:checked ~ .frame1 { display: block; }
+#frame2:checked ~ .frame1, .frame3, .frame4 { display: none; }
+#frame2:checked ~ .frame2 { display: block; }
+#frame3:checked ~ .frame1, .frame2, .frame4 { display: none; }
+#frame3:checked ~ .frame3 { display: block; }
+#frame4:checked ~ .frame1, .frame2, .frame3 { display: none; }
+#frame4:checked ~ .frame4 { display: block; }
+
+@keyframes animate-frame {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
+}
+
+@media screen and (max-width: 480px) {
+  a {
+    max-width: 100%;
+    width: 100%;
+    order: 10;
+    font-size: 0.8rem;
+  }
+  .radio:first-of-type { margin-left: auto; }
+  .radio:last-of-type { margin-right: auto; }
+  .radio { margin-bottom: 1rem; }
+}

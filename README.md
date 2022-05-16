@@ -1,0 +1,2 @@
+- Desktop: width 1024px
+- Mobile: any width less than 480px
